@@ -20,7 +20,7 @@ export const GameItem = ({ gameId }) => {
 
   console.log(game);
   return (
-    <div className="bg-gray-700 rounded-md text-[#fffffe] p-2 h-full ">
+    <div className="bg-gray-700 rounded-md text-[#fffffe] p-2 h-full">
       <Link to={`/genres/${gameId}`}>
         <div className="flex flex-col h-full ">
           <div className="flex flex-col flex-grow">

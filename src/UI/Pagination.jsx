@@ -8,7 +8,7 @@ export const Pagination = ({ currentPage, setSearchParams, nextPage }) => {
   };
 
   return (
-    <section className="bg-[#0f0e17] text-[#fffffe] p-3 flex items-center justify-center">
+    <section className="bg-[#0f0e17] text-[#fffffe] p-3 flex items-center justify-center max-sm:text-sm">
       <div
         disabled={currentPage <= 1}
         onClick={clickPreviousPage}

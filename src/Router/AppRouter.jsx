@@ -13,7 +13,9 @@ import { Genres } from "../Pages/Genres";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Gamer">
+      {" "}
+      {/* Set the basename to your repository name */}
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Hero />} />

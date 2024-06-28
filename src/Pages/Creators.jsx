@@ -17,14 +17,14 @@ export const Creators = () => {
   if (!creators) return null;
 
   return (
-    <section className="min-h-screen p-10 text-[#fffffe] bg-[#0f0e17] font-supreme">
-      <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
+    <section className="min-h-screen pt-5 max-sm:pb-5 px-10 text-[#fffffe] bg-[#0f0e17] max-sm:px-3 font-supreme">
+      <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
         <span className="font-nunito">
           Game <span className="text-[#f25f4c]"> creators</span>
         </span>
-        <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 "></div>
+        <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1"></div>
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-sm:gap-5 max-sm:text-sm">
         {creators.results.map((creator) => (
           <div
             key={creator.id}

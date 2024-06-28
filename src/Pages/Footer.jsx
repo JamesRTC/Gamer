@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <div className=" bg-black text-white px-10 py-5 flex flex-col gap-2 pt-5 font-supreme">
+    <div className=" bg-black text-white px-10 max-sm:px-3 max-sm:text-sm py-5 flex flex-col gap-2 pt-5 font-supreme">
       <div className="flex items-center justify-between">
         <div>
           <Link link to="/">

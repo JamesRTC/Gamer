@@ -17,14 +17,14 @@ export const Stores = () => {
   console.log(stores);
 
   return (
-    <section className="min-h-screen p-10 text-[#fffffe] bg-[#0f0e17] items-center font-supreme">
-      <h1 className="flex justify-center items-center flex-col text-2xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
+    <section className="min-h-screen max-sm:pt-5 px-10 max-sm:px-3 text-[#fffffe] bg-[#0f0e17] items-center font-supreme">
+      <h1 className="flex justify-center items-center flex-col text-2xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
         <span className="text-[#fffffe] font-nunito">
           All <span className="text-[#f25f4c]"> stores</span>
         </span>
-        <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 "></div>
+        <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1  "></div>
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-sm:text-sm ">
         {stores.results.map((store) => (
           <>
             <a

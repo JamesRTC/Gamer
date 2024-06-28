@@ -8,8 +8,8 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
 
   return (
     <section className="font-supreme">
-      <nav className="relative flex items-center justify-between py-4 px-10 bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
-        <span className="text-3xl">
+      <nav className="relative flex items-center justify-between py-4 px-10 ma bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
+        <span className="text-3xl max-sm:text-xl">
           <NavLink to="/">
             <div className="flex text-[#f25f4c]">
               <span>G</span>
@@ -60,7 +60,7 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
           onClick={handleClick}
         >
           <div className="absolute inset-0 bg-[#0f0e17]"></div>
-          <ul className="relative flex flex-col items-center min-h-screen justify-center pb-[100px] gap-16 text-3xl">
+          <ul className="relative flex flex-col items-center min-h-screen justify-center pb-[100px] gap-16 text-3xl max-sm:text-xl max-sm:pb-[300px]">
             <li className="hover:text-[#f25f4c] transition-all duration-300">
               <NavLink to="/games">Games</NavLink>
             </li>

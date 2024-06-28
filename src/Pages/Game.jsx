@@ -51,7 +51,7 @@ export const Game = () => {
   }
   return (
     <PropsContext.Provider value={{ gameData }}>
-      <section className="min-h-screen bg-[#0f0e17] text-[#fffffe]  max-md:shadow-md px-10 font-supreme pb-10">
+      <section className="min-h-screen max-sm:text-sm max-sm:leading-7 leading-[28px] bg-[#0f0e17] text-[#fffffe]  max-md:shadow-md px-10 font-supreme pb-10 max-sm:px-3">
         <div>
           <Link to="/games" onClick={goBack}>
             <span className="flex gap-1 pt-2">
@@ -65,7 +65,7 @@ export const Game = () => {
             </span>
           </Link>
         </div>
-        <h1 className="uppercase font-bold text-3xl py-3 font-nunito">
+        <h1 className="uppercase font-bold text-3xl py-3 max-sm:text-xl font-nunito">
           {gameData.name}
         </h1>
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
@@ -77,7 +77,7 @@ export const Game = () => {
             />
           </div>
           <div>
-            <h1 className="text-2xl pb-2 font-nunito">
+            <h1 className="text-2xl pb-2 font-nunito max-sm:text-lg">
               {" "}
               <span className="text-[#f25f4c] "> Game </span> Details
             </h1>

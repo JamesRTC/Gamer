@@ -38,15 +38,15 @@ export const Genres = () => {
   if (!genres) return null;
 
   return (
-    <section className="bg-[#0f0e17] font-nunito pb-10">
-      <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
+    <section className="bg-[#0f0e17] font-nunito">
+      <h1 className="flex justify-center items-center flex-col text-2xl max-sm:text-lg max-md:text-xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
         <span className="text-[#fffffe] font-supreme">
           All <span className="text-[#f25f4c]"> Genres</span>
         </span>
-        <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 "></div>
+        <div className="h-2 w-[100px] max-sm:w-[80px] max-sm:mt-2 max-sm:h-1 bg-[#f25f4c] rounded-full mt-4 "></div>
       </h1>
       <div className="grid grid-cols-[80px_1fr] md:grid-cols-[auto_1fr] bg-slate-300 min-h-screen">
-        <aside className=" bg-[#0f0e17] text-white p-4 h-full overflow-scroll min-h-screen">
+        <aside className=" bg-[#0f0e17] text-white p-4 max-sm:p-0  max-sm:text-xs h-full overflow-scroll min-h-screen">
           {genres.results.map((genre) => (
             <div
               key={genre.id}
@@ -59,13 +59,13 @@ export const Genres = () => {
             </div>
           ))}
         </aside>
-        <main className="p-4 min-h-screen">
+        <main className="p-4 min-h-screen max-sm:p-2">
           {selectedGenre && (
             <div className="">
-              <h2 className="text-2xl font-bold mb-4 uppercase">
+              <h2 className="text-2xl font-bold mb-4 uppercase max-sm:text-sm max-sm:mb-2">
                 {selectedGenre.name}
               </h2>
-              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3 max-sm:text-sm">
                 {selectedGenre.games.map((game) => (
                   <GameItem key={game.id} gameId={game.id} />
                 ))}
