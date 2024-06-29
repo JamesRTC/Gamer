@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../UI/Button";
 import { data } from "../API/genreAPi";
 import { useEffect, useState, useRef } from "react";
+import { HeroInfiniteScroll } from "./HeroInfiniteScroll";
 
 export const Hero = () => {
   const [image, setImage] = useState(data[0].image);
@@ -34,8 +35,8 @@ export const Hero = () => {
         setCurrentIndex(nextIndex);
         setImage(data[nextIndex].image);
         setAnimationClass("image-slide-in");
+        resetProgress();
       }, 300);
-      resetProgress();
       animationRef.current = requestAnimationFrame(step);
     }
   };
@@ -61,7 +62,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-[#0f0e17] text-[#fffffe] px-10 max-sm:px-0 pb-5 font-nunito">
       <div>
-        <h1 className="text-xl font-bold pt-5 pb-3  tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
+        <h1 className=" mt-11 text-xl font-bold pt-5 pb-3  tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
           Discover New Games
         </h1>
 
@@ -129,6 +130,16 @@ export const Hero = () => {
           <Link to="/games">
             <Button className="mr-auto" text="Browse all games" />
           </Link>
+        </div>
+
+        <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
+          <span className="font-supreme">
+            Top <span className="text-[#f25f4c]"> Games</span>
+          </span>
+          <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1 "></div>
+        </h1>
+        <div>
+          <HeroInfiniteScroll />
         </div>
       </div>
     </section>

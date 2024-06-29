@@ -18,7 +18,7 @@ export const Stores = () => {
 
   return (
     <section className="min-h-screen max-sm:pt-5 px-10 max-sm:px-3 text-[#fffffe] bg-[#0f0e17] items-center font-supreme">
-      <h1 className="flex justify-center items-center flex-col text-2xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
+      <h1 className="mt-11 flex justify-center items-center flex-col text-2xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
         <span className="text-[#fffffe] font-nunito">
           All <span className="text-[#f25f4c]"> stores</span>
         </span>

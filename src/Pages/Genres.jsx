@@ -39,7 +39,7 @@ export const Genres = () => {
 
   return (
     <section className="bg-[#0f0e17] font-nunito">
-      <h1 className="flex justify-center items-center flex-col text-2xl max-sm:text-lg max-md:text-xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
+      <h1 className="mt-11 flex justify-center items-center flex-col text-2xl max-sm:text-lg max-md:text-xl font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
         <span className="text-[#fffffe] font-supreme">
           All <span className="text-[#f25f4c]"> Genres</span>
         </span>

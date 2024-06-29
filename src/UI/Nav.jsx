@@ -8,7 +8,7 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
 
   return (
     <section className="font-supreme">
-      <nav className="relative flex items-center justify-between py-4 px-10 ma bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
+      <nav className="max-sm:px-5 fixed top-0 left-0 right-0 z-10 flex items-center justify-between py-4 px-10 ma bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
         <span className="text-3xl max-sm:text-xl">
           <NavLink to="/">
             <div className="flex text-[#f25f4c]">

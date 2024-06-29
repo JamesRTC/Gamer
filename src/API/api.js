@@ -42,3 +42,10 @@ export async function fetchHeroSectionGenre() {
   const data = await res.json();
   return data;
 }
+
+export async function fetchHeroData(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw Error("Failed to fetch hero section games");
+  const data = await res.json();
+  return data;
+}

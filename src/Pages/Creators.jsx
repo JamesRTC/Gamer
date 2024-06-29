@@ -18,7 +18,7 @@ export const Creators = () => {
 
   return (
     <section className="min-h-screen pt-5 max-sm:pb-5 px-10 text-[#fffffe] bg-[#0f0e17] max-sm:px-3 font-supreme">
-      <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
+      <h1 className=" mt-11 flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider pb-5 max-md:text-stone-300">
         <span className="font-nunito">
           Game <span className="text-[#f25f4c]"> creators</span>
         </span>
@@ -28,7 +28,7 @@ export const Creators = () => {
         {creators.results.map((creator) => (
           <div
             key={creator.id}
-            className="relative flex flex-col items-center justify-between p-5 rounded-lg overflow-hidden"
+            className="z-0 relative flex flex-col items-center justify-between p-5 rounded-lg overflow-hidden"
             style={{
               height: "100%", // or set a specific min-height if needed
               backgroundImage: `url(${creator.image_background})`,
