@@ -8,7 +8,7 @@ export const Hero = () => {
   const [image, setImage] = useState(data[0].image);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [animationClass, setAnimationClass] = useState("");
+
   const navigate = useNavigate();
 
   const animationRef = useRef();
@@ -30,13 +30,12 @@ export const Hero = () => {
       animationRef.current = requestAnimationFrame(step);
     } else {
       const nextIndex = (currentIndex + 1) % data.length;
-      setAnimationClass("image-slide-out");
-      setTimeout(() => {
-        setCurrentIndex(nextIndex);
-        setImage(data[nextIndex].image);
-        setAnimationClass("image-slide-in");
-        resetProgress();
-      }, 300);
+
+      setCurrentIndex(nextIndex);
+      setImage(data[nextIndex].image);
+
+      resetProgress();
+
       animationRef.current = requestAnimationFrame(step);
     }
   };
@@ -48,43 +47,36 @@ export const Hero = () => {
   }, [currentIndex]);
 
   const handleClick = (index, image) => {
-    setAnimationClass("image-slide-out");
-    setTimeout(() => {
-      setImage(image);
-      setCurrentIndex(index);
-      setAnimationClass("image-slide-in");
-      resetProgress();
-      cancelAnimationFrame(animationRef.current);
-      animationRef.current = requestAnimationFrame(step);
-    }, 300);
+    setImage(image);
+    setCurrentIndex(index);
+
+    resetProgress();
+    cancelAnimationFrame(animationRef.current);
+    animationRef.current = requestAnimationFrame(step);
   };
 
   return (
-    <section className="min-h-screen bg-[#0f0e17] text-[#fffffe] px-10 max-sm:px-0 pb-5 font-nunito">
+    <section className="hero-section min-h-screen bg-[#0f0e17] text-[#fffffe] px-10 max-sm:px-0 pb-5 font-nunito">
       <div>
-        <h1 className=" mt-11 text-xl font-bold pt-5 pb-3  tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
+        <h1 className="mt-11 text-xl font-bold pt-5 pb-3 tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
           Discover New Games
         </h1>
-
         <p className="text-sm leading-8 lg:text-xl text-[#a7a9be] max-w-2xl pb-10 max-sm:px-3 max-sm:leading-5">
           Welcome! Our website offers a vast collection of the latest and
           greatest games. Find your next favorite game. Enjoy!
         </p>
-
         <div className="flex items-center justify-center gap-2 max-md:flex-col-reverse">
           <div className="w-3/4 relative h-[600px] max-md:w-full max-sm:h-[400px]">
             <div className="absolute inset-0 bg-black/30"></div>
             <img
               src={image}
               alt=""
-              className={`w-full h-full object-cover lg:rounded-3xl md:rounded-xl ${animationClass}`}
+              className={`w-full h-full object-cover lg:rounded-3xl md:rounded-xl`}
             />
-
             <div className="absolute bottom-8 pl-3 space-y-4">
               <div className="uppercase text-3xl max-md:text-sm max-sm:text-xs">
                 {data.find((game) => game.image === image).name}
               </div>
-
               <button
                 className="bg-[#fffffe] text-[#0f0e17] py-2 px-3 max-md:flex-nowrap rounded-md font-semibol hover:bg-[#f25f4c] hover:text-white transition-all duration-300 max-sm:text-xs font-semibold"
                 onClick={() =>
@@ -97,7 +89,6 @@ export const Hero = () => {
               </button>
             </div>
           </div>
-
           <div className="w-1/4 h-full max-md:w-full max-md:hidden">
             {data.map((game, index) => (
               <div
@@ -125,18 +116,16 @@ export const Hero = () => {
             ))}
           </div>
         </div>
-
         <div className="mr-auto pt-5 max-sm:px-3">
           <Link to="/games">
             <Button className="mr-auto" text="Browse all games" />
           </Link>
         </div>
-
         <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider p-5 max-md:text-stone-300">
           <span className="font-supreme">
             Top <span className="text-[#f25f4c]"> Games</span>
           </span>
-          <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1 "></div>
+          <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1"></div>
         </h1>
         <div>
           <HeroInfiniteScroll />
