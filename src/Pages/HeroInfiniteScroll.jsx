@@ -28,7 +28,7 @@ export const HeroInfiniteScroll = () => {
   );
 
   if (isLoading) return <Spinner />;
-  if (isError) return <div>Error: {error.message}</div>;
+  if (isError) return <div>Error: {error.message}. Try reloading the page</div>;
 
   // Calculate the total number of items loaded so far
   const totalItems =

@@ -52,7 +52,7 @@ export const Game = () => {
   return (
     <PropsContext.Provider value={{ gameData }}>
       <section className="mt-[55px] min-h-screen max-sm:text-sm max-sm:leading-7 leading-[28px] bg-[#0f0e17] text-[#fffffe]  max-md:shadow-md px-10 font-supreme pb-10 max-sm:px-3">
-        <div>
+        <div className="mt-2">
           <Link to="/games" onClick={goBack}>
             <span className="flex gap-1 pt-2">
               <span className="flex items-center justify-center">

@@ -58,13 +58,15 @@ export const Hero = () => {
   return (
     <section className="hero-section min-h-screen bg-[#0f0e17] text-[#fffffe] px-10 max-sm:px-0 pb-5 font-nunito">
       <div>
-        <h1 className="mt-11 text-xl font-bold pt-5 pb-3 tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
+        <h1 className="mt-[50px] text-xl font-bold pt-5 pb-3 tracking-wide text-[#fffffe] uppercase font-supreme max-sm:px-3 max-sm:pb-2 max-sm:text-lg">
           Discover New Games
         </h1>
-        <p className="text-sm leading-8 lg:text-xl text-[#a7a9be] max-w-2xl pb-10 max-sm:px-3 max-sm:leading-5">
+
+        <p className="text-sm leading-8 lg:text-xl text-[#a7a9be] max-w-2xl max-sm:leading-5 pb-10 max-sm:px-3">
           Welcome! Our website offers a vast collection of the latest and
           greatest games. Find your next favorite game. Enjoy!
         </p>
+
         <div className="flex items-center justify-center gap-2 max-md:flex-col-reverse">
           <div className="w-3/4 relative h-[600px] max-md:w-full max-sm:h-[400px]">
             <div className="absolute inset-0 bg-black/30"></div>
