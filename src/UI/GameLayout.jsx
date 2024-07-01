@@ -14,7 +14,7 @@ export const GameLayout = () => {
           <li
             className={`${
               location.pathname === pcRequirementsPath
-                ? "bg-white text-gray-900"
+                ? "bg-[#f25f4c] text-gray-900"
                 : "text-gray-100"
             } border font-semibold p-2 mr-1 uppercase hover:bg-[#f25f4c] transition-all duration-300`}
           >
@@ -25,7 +25,7 @@ export const GameLayout = () => {
           <li
             className={`${
               location.pathname === gameStoresPath
-                ? "bg-white text-gray-900"
+                ? "bg-[#f25f4c] text-gray-900"
                 : "text-gray-100"
             } border font-semibold p-2 uppercase transition-all duration-300 hover:bg-[#f25f4c] `}
           >
