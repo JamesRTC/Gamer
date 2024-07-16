@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { getCurrentYear } from "../utilities/helper";
 
 export const Footer = () => {
   return (
@@ -46,7 +47,7 @@ export const Footer = () => {
           </ul>
         </nav>
 
-        <div>Copyright © 2025 gamer.com</div>
+        <div>Copyright &copy; {getCurrentYear()} gamer.com</div>
       </div>
     </div>
   );
