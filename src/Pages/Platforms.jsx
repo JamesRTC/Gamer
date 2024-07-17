@@ -65,7 +65,7 @@ export const Platforms = () => {
         <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1 "></div>
       </h1>
 
-      <div className="flex gap-2 items-center justify-center my-2 flex-wrap sticky top-[65px] z-10 bg-[#0f0e17] shadow-md">
+      <div className="flex gap-2 items-center justify-center my-2 flex-wrap sticky top-[65px] z-10 bg-[#0f0e17] shadow-md pb-2">
         {platforms.map((platform, index) => (
           <Button
             key={index}
