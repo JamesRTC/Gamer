@@ -10,6 +10,7 @@ Features:
 3. Infinite scrolling for game lists
 4. Prefetching data for a seamless experience
 5. Responsive design for various devices
+6. Pagination for game lists
 
 Technologies Used:
 
