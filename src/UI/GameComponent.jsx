@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { star } from "../../public/assets/icons";
 
 export const GameComponent = ({ game }) => {
-  console.log(game);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
