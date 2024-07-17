@@ -56,6 +56,13 @@ export const Platforms = () => {
   const totalItems =
     heroGames?.pages.reduce((acc, page) => acc + page.results.length, 0) || 0;
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="relative bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17] max-md:shadow-md min-h-screen px-10 max-sm:px-3 font-nunito">
       <h1 className="flex justify-center items-center flex-col text-2xl max-md:text-xl max-sm:text-lg font-bold uppercase tracking-wider p-5 mt-11 max-md:text-stone-300">
@@ -73,6 +80,7 @@ export const Platforms = () => {
             onClick={() => handleSelectPlatform(platform)}
             type="platform"
             isActive={selectedPlatform === platform.toLowerCase()}
+            scrollToTop={scrollToTop}
           />
         ))}
       </div>
