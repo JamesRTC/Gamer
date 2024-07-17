@@ -8,10 +8,10 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
 
   return (
     <section id="nav" className="font-supreme">
-      <nav className="max-sm:px-5 fixed top-0 left-0 right-0 z-10 flex items-center justify-between py-4 px-10 ma bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
+      <nav className="max-sm:px-5 fixed top-0 left-0 right-0 z-10 flex items-center justify-between py-4 px-10 bg-[#0f0e17] text-[#fffffe] max-md:text-[#0f0e17]">
         <span className="text-3xl max-sm:text-xl">
           <NavLink to="/">
-            <div className="flex text-[#f25f4c]">
+            <div id="logo" className="flex text-[#f25f4c]">
               <span>G</span>
               <span className="flex items-center justify-center">
                 <ion-icon name="game-controller-outline"></ion-icon>
@@ -23,6 +23,9 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
         <ul className="flex gap-16 text-xl max-md:hidden">
           <li className="hover:text-[#f25f4c] transition-all duration-300">
             <NavLink to="/games">Games</NavLink>
+          </li>
+          <li className="hover:text-[#f25f4c] transition-all duration-300">
+            <NavLink to="/platforms">Platforms</NavLink>
           </li>
           <li className="hover:text-[#f25f4c] transition-all duration-300">
             <NavLink to="/genres">Genres</NavLink>
@@ -60,9 +63,13 @@ export const Nav = ({ mobileNav, setMobileNav }) => {
           onClick={handleClick}
         >
           <div className="absolute inset-0 bg-[#0f0e17]"></div>
-          <ul className="relative flex flex-col items-center min-h-screen justify-center pb-[100px] gap-16 text-3xl max-sm:text-xl max-sm:pb-[300px]">
+          <ul className="relative flex flex-col items-center min-h-screen justify-center gap-16 text-3xl max-sm:text-xl">
             <li className="hover:text-[#f25f4c] transition-all duration-300">
               <NavLink to="/games">Games</NavLink>
+            </li>
+
+            <li className="hover:text-[#f25f4c] transition-all duration-300">
+              <NavLink to="/platforms">Platforms</NavLink>
             </li>
 
             <li className="hover:text-[#f25f4c] transition-all duration-300">

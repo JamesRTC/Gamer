@@ -2,9 +2,21 @@ import { Link } from "react-router-dom";
 import { star } from "../../public/assets/icons";
 
 export const GameComponent = ({ game }) => {
+  console.log(game);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="col-span-4 md:col-span-2 lg:col-span-1 max-md:bg-stone-300 max-md:p-2 rounded-md p-2 h-full max-sm:text-sm">
-      <Link to={`/games/${game.id}`} className="flex flex-col h-full">
+      <Link
+        to={`/games/${game.id}`}
+        className="flex flex-col h-full"
+        onClick={() => scrollToTop()}
+      >
         <div className="relative flex-grow w-full h-0 pb-[56.25%] hover:border-s-4 border-[#f25f4c] transition-all duration-100">
           <img
             src={game.background_image}

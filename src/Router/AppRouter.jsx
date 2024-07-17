@@ -10,6 +10,7 @@ import { GameLayout } from "../UI/GameLayout";
 import { PCRequirements } from "../Pages/PCRequirements";
 import { GameStores } from "../Pages/GameStores";
 import { Genres } from "../Pages/Genres";
+import { Platforms } from "../Pages/Platforms";
 
 export const AppRouter = () => {
   return (
@@ -34,6 +35,7 @@ export const AppRouter = () => {
           </Route>
           <Route path="creators" element={<Creators />} />
           <Route path="stores" element={<Stores />} />
+          <Route path="platforms" element={<Platforms />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

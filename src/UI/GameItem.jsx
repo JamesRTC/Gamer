@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 import { Spinner } from "./Spinner";
 
 export const GameItem = ({ gameId }) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const { isLoading, data: game } = useQuery({
     queryKey: ["game", gameId],
     queryFn: () => fetchGame(gameId),
@@ -21,7 +28,7 @@ export const GameItem = ({ gameId }) => {
   console.log(game);
   return (
     <div className="bg-gray-700 rounded-md text-[#fffffe] p-2 h-full">
-      <Link to={`/genres/${gameId}`}>
+      <Link to={`/genres/${gameId}`} onClick={() => scrollToTop()}>
         <div className="flex flex-col h-full ">
           <div className="flex flex-col flex-grow">
             <div className="relative w-full h-0 pb-[56.25%] hover:border-e-4 border-[#f25f4c] transition-all duration-100">

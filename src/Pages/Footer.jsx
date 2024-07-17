@@ -34,6 +34,9 @@ export const Footer = () => {
             </li>
             |
             <li className="hover:text-[#f25f4c] transition-all duration-300">
+              <NavLink to="/genres">Platforms</NavLink>
+            </li>
+            <li className="hover:text-[#f25f4c] transition-all duration-300">
               <NavLink to="/genres">Genres</NavLink>
             </li>
             |

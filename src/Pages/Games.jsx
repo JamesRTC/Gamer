@@ -49,6 +49,7 @@ export const Games = () => {
           currentPage={currentPage}
           setSearchParams={setSearchParams}
           nextPage={APINextPage}
+          id={"all-games"}
         />
       </div>
     </section>

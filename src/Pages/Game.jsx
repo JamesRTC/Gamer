@@ -32,18 +32,18 @@ export const Game = () => {
 
   const cleanDescription = getFirstParagraph(gameData.description);
 
-  // Store scroll position before navigating away
-  window.addEventListener("beforeunload", function () {
-    sessionStorage.setItem("scrollPosition", window.scrollY);
-  });
+  // // Store scroll position before navigating away
+  // window.addEventListener("beforeunload", function () {
+  //   sessionStorage.setItem("scrollPosition", window.scrollY);
+  // });
 
-  // Restore scroll position when page is loaded
-  window.addEventListener("load", function () {
-    const scrollPosition = sessionStorage.getItem("scrollPosition");
-    if (scrollPosition !== null) {
-      window.scrollTo(0, parseInt(scrollPosition));
-    }
-  });
+  // // Restore scroll position when page is loaded
+  // window.addEventListener("load", function () {
+  //   const scrollPosition = sessionStorage.getItem("scrollPosition");
+  //   if (scrollPosition !== null) {
+  //     window.scrollTo(0, parseInt(scrollPosition));
+  //   }
+  // });
 
   // Custom back button function
   function goBack() {
@@ -69,13 +69,16 @@ export const Game = () => {
           {gameData.name}
         </h1>
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
-          <div className="relative aspect-video">
-            <img
-              src={gameData.background_image}
-              alt="game background image"
-              className="absolute inset-0 h-full w-full object-cover rounded-md"
-            />
+          <div>
+            <div className="relative aspect-video">
+              <img
+                src={gameData.background_image}
+                alt="game background image"
+                className="absolute inset-0 h-full w-full object-cover rounded-md"
+              />
+            </div>
           </div>
+
           <div>
             <h1 className="text-2xl pb-2 font-nunito max-sm:text-lg">
               {" "}
