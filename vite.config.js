@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Gamer/", // Set this to your basename
+  base: "/Gamer/", // Ensure this matches your Router basename
   build: {
     outDir: "dist",
   },
