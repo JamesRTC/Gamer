@@ -14,7 +14,7 @@ import { Platforms } from "../Pages/Platforms";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter basename="/Gamer">
+    <BrowserRouter>
       {/* Set the basename to your repository name */}
       <Routes>
         <Route path="/" element={<AppLayout />}>
