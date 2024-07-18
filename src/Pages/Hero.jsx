@@ -63,10 +63,9 @@ export const Hero = () => {
         </h1>
 
         <p className="text-sm leading-8 lg:text-xl text-[#a7a9be] max-w-5xl max-sm:leading-5 pb-10 max-sm:px-3">
-          Explore our vast collection of the latest and top-rated games,
-          complete with all the details you need. Whether you're gaming on
-          PlayStation, Xbox, Nintendo, PC, or any gaming device, we've got you
-          covered. Happy game hunting!
+          Explore a great collection of the latest and top-rated games, with all
+          the details you need. Whether you're gaming on PlayStation, Xbox,
+          Nintendo, PC, or any other device, you’re covered. Happy game hunting!
         </p>
 
         <div className="flex items-center justify-center gap-2 max-md:flex-col-reverse">
