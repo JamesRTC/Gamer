@@ -10,7 +10,7 @@ export const GameComponent = ({ game }) => {
   };
 
   return (
-    <div className="col-span-4 md:col-span-2 lg:col-span-1 max-md:bg-stone-300 max-md:p-2 rounded-md p-2 h-full max-sm:text-sm">
+    <div className="col-span-4 md:col-span-2 lg:col-span-1 max-md:bg-stone-300 max-md:p-2 rounded-md p-2 h-full max-sm:text-sm max-md:w-full">
       <Link
         to={`/games/${game.id}`}
         className="flex flex-col h-full"

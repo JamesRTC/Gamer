@@ -72,44 +72,46 @@ export const Platforms = () => {
         <div className="h-2 w-[100px] bg-[#f25f4c] rounded-full mt-4 max-sm:w-[80px] max-sm:mt-2 max-sm:h-1 "></div>
       </h1>
 
-      <div className="flex gap-2 items-center justify-center my-2 flex-wrap sticky top-[65px] z-10 bg-[#0f0e17] shadow-md pb-2">
-        {platforms.map((platform, index) => (
-          <Button
-            key={index}
-            text={platform.toUpperCase()}
-            onClick={() => handleSelectPlatform(platform)}
-            type="platform"
-            isActive={selectedPlatform === platform.toLowerCase()}
-            scrollToTop={scrollToTop}
-          />
-        ))}
-      </div>
-
-      {isFetching && <InfiniteLoadSpinner />}
-      <InfiniteScroll
-        dataLength={totalItems} // Pass the total number of items loaded so far
-        next={fetchNextPage}
-        hasMore={hasNextPage}
-        endMessage={<p className="text-center font-bold">All games loaded</p>}
-      >
-        <div className="grid grid-cols-4 gap-5 lg:grid-cols-3 max-md:text-[#0f0e17] max-md:shadow-md max-sm:px-3 font-nunito">
-          {heroGames?.pages.map((page, pageIndex) => (
-            <React.Fragment key={pageIndex}>
-              {page.results
-                .filter((item) =>
-                  item.platforms.some((platform) =>
-                    platform.platform.name
-                      .toLowerCase()
-                      .includes(selectedPlatform)
-                  )
-                )
-                .map((game) => (
-                  <GameComponent key={game.id} game={game} />
-                ))}
-            </React.Fragment>
+      <div className="max-md:flex">
+        <div className="sticky top-[68px] self-start max-md:w-[100px] z-10 bg-black md:flex items-center justify-center gap-2 pb-2 flex-wrap">
+          {platforms.map((platform, index) => (
+            <Button
+              key={index}
+              text={platform.toUpperCase()}
+              onClick={() => handleSelectPlatform(platform)}
+              type="platform"
+              isActive={selectedPlatform === platform.toLowerCase()}
+              scrollToTop={scrollToTop}
+            />
           ))}
         </div>
-      </InfiniteScroll>
+
+        {isFetching && <InfiniteLoadSpinner />}
+        <InfiniteScroll
+          dataLength={totalItems} // Pass the total number of items loaded so far
+          next={fetchNextPage}
+          hasMore={hasNextPage}
+          endMessage={<p className="text-center font-bold">All games loaded</p>}
+        >
+          <div className="max-md:w-full grid grid-cols-4 gap-5 lg:grid-cols-3 max-md:text-[#0f0e17] max-md:shadow-md max-sm:px-3 font-nunito">
+            {heroGames?.pages.map((page, pageIndex) => (
+              <React.Fragment key={pageIndex}>
+                {page.results
+                  .filter((item) =>
+                    item.platforms.some((platform) =>
+                      platform.platform.name
+                        .toLowerCase()
+                        .includes(selectedPlatform)
+                    )
+                  )
+                  .map((game) => (
+                    <GameComponent key={game.id} game={game} />
+                  ))}
+              </React.Fragment>
+            ))}
+          </div>
+        </InfiniteScroll>
+      </div>
     </section>
   );
 };
