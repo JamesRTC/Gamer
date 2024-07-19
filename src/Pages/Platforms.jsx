@@ -73,7 +73,7 @@ export const Platforms = () => {
       </h1>
 
       <div className="max-md:flex">
-        <div className="sticky top-[68px] self-start max-md:w-[100px] z-10 bg-black md:flex items-center justify-center gap-2 pb-2 flex-wrap">
+        <div className="sticky top-[68px] self-start max-md:w-[100px] z-10 md:bg-black md:flex items-center justify-center gap-2 pb-2 flex-wrap">
           {platforms.map((platform, index) => (
             <Button
               key={index}
@@ -93,7 +93,7 @@ export const Platforms = () => {
           hasMore={hasNextPage}
           endMessage={<p className="text-center font-bold">All games loaded</p>}
         >
-          <div className="max-md:w-full grid grid-cols-4 gap-5 lg:grid-cols-3 max-md:text-[#0f0e17] max-md:shadow-md max-sm:px-3 font-nunito">
+          <div className="grid grid-cols-4 gap-5 lg:grid-cols-3 max-md:text-[#0f0e17] max-md:shadow-md max-sm:px-3 font-nunito">
             {heroGames?.pages.map((page, pageIndex) => (
               <React.Fragment key={pageIndex}>
                 {page.results
