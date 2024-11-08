@@ -13,7 +13,13 @@ export const Games = () => {
 
   useEffect(() => {
     const nextPage = currentPage + 1;
-    queryClient.prefetchQuery(["games", nextPage], () => fetchGames(nextPage));
+    queryClient.prefetchQuery({
+      queryKey: ["games", nextPage],
+      queryFn: () => fetchGames(nextPage),
+      // Optional: you can also add other options here
+      staleTime: Infinity,
+      cacheTime: 1000 * 60 * 60 * 24,
+    });
   }, [queryClient, currentPage]);
 
   const { isLoading, data: allGames } = useQuery({

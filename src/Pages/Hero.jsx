@@ -81,7 +81,7 @@ export const Hero = () => {
                 {data.find((game) => game.image === image).name}
               </div>
               <button
-                className="bg-[#fffffe] text-[#0f0e17] py-2 px-3 max-md:flex-nowrap rounded-md font-semibol hover:bg-[#f25f4c] hover:text-white transition-all duration-300 max-sm:text-xs font-semibold"
+                className="bg-[#fffffe] text-[#0f0e17] py-2 px-3 max-md:flex-nowrap rounded-md font-semibold hover:bg-[#f25f4c] hover:text-white transition-all duration-300 max-sm:text-xs font-semibold"
                 onClick={() =>
                   navigate(
                     `/games/${data.find((game) => game.image === image).id}`

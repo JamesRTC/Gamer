@@ -18,15 +18,13 @@ export const HeroInfiniteScroll = () => {
     isLoading,
     isError,
     error,
-  } = useInfiniteQuery(
-    ["top-games"],
-    ({ pageParam = initialPage }) => fetchHeroData(pageParam),
-    {
-      getNextPageParam: (lastPage) => {
-        return lastPage.next || undefined;
-      },
-    }
-  );
+  } = useInfiniteQuery({
+    queryKey: ["top-games"],
+    queryFn: ({ pageParam = initialPage }) => fetchHeroData(pageParam),
+    getNextPageParam: (lastPage) => {
+      return lastPage.next || undefined;
+    },
+  });
 
   if (isLoading) return <Spinner />;
   if (isError) return <div>Error: {error.message}. Try reloading the page</div>;
@@ -49,11 +47,7 @@ export const HeroInfiniteScroll = () => {
           {heroGames?.pages.map((page, pageIndex) => (
             <React.Fragment key={pageIndex}>
               {page.results
-                .filter((item) =>
-                  item.parent_platforms.some((platform) =>
-                    platform.platform.name.toLowerCase().includes("linux")
-                  )
-                )
+                .filter((item) => item.rating * 1 >= 4)
                 .map((game) => (
                   <GameComponent key={game.id} game={game} />
                 ))}
